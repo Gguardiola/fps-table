@@ -14,8 +14,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-      <div className={indexStyles.mainContainer}>
+      <main className={indexStyles.mainContainer}>
+      <div>
         <h1>Tabla de compotentes y sus FPS/rendimiento</h1>
         <table className={indexStyles.default}>
             <tr>
