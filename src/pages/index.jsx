@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Roboto } from 'next/font/google'
 import indexStyles from '@/styles/general.module.css'
-import Layout from '../component/Layout'
+import Tabla from '../component/Tabla'
 
 const roboto = Roboto({
   weight: '700',
@@ -21,7 +21,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main  className={roboto.className}>
-        <Layout></Layout>
+        <Tabla></Tabla>
       </main>
     </>
   )
