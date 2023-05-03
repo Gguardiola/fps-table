@@ -1,0 +1,16 @@
+body{
+    background-color:#FFF0C9
+}
+table {
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    line-height: 2;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.isPlayable {
+    color:green;
+
+}
