@@ -1,7 +1,7 @@
-body{
+.mainContainer{
     background-color:#FFF0C9
 }
-table {
+.default {
     border-collapse: collapse;
 }
 th, td {
