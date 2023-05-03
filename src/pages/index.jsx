@@ -19,15 +19,15 @@ export default function Home() {
         <h1>Tabla de compotentes y sus FPS/rendimiento</h1>
         <table className={indexStyles.default}>
             <tr>
-            <td>Ryzen 7 5700x - RTX2060 - 32GB RAM</td>
-            <td>30FPS estables con bajones</td>
+            <td className={indexStyles.td}>Ryzen 7 5700x - RTX2060 - 32GB RAM</td>
+            <td className={indexStyles.td}>30FPS estables con bajones</td>
             <td className={indexStyles.isPlayable}>Jugable</td>
             </tr>
         
             <tr>    
-            <td>I5 9600K - RTX2060 - 16GB</td>
-            <td>20 FPS estables sin bajones</td>
-            <td style="color:red">Injugable</td>
+            <td className={indexStyles.td}>I5 9600K - RTX2060 - 16GB</td>
+            <td className={indexStyles.td}>20 FPS estables sin bajones</td>
+            <td className={indexStyles.isPlayable} >Injugable</td>
             </tr>
         </table>
       </div>
