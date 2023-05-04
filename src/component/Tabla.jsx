@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from 'react';
 import indexStyles from '@/styles/general.module.css'
 import api from '../../api'
+import shortid from 'shortid';
 export default function Tabla(){
     const [db, setDb] = useState('');
     useEffect(() => {
@@ -21,12 +22,12 @@ export default function Tabla(){
                     
                          {db ? (
                             db.data.map((result) => ( 
-                                <tr>
-                                    <td>{result.username}</td>
-                                    <td>{result.emulator}</td>
-                                    <td>{result.components}</td>
-                                    <td>{result.performance}</td>
-                                    <td>{result.veredict}</td>
+                                <tr key={shortid.generate()}>
+                                    <td key={shortid.generate()}>{result.username}</td>
+                                    <td key={shortid.generate()}>{result.emulator}</td>
+                                    <td key={shortid.generate()}>{result.components}</td>
+                                    <td key={shortid.generate()}>{result.performance}</td>
+                                    <td key={shortid.generate()}>{result.veredict}</td>
                                 </tr>
                             ))
                         ) : (
