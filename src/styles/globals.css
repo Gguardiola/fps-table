@@ -19,3 +19,7 @@ line-height: 3;
 padding-left: 10px;
 padding-right: 10px;
 }
+textarea {
+  resize: none;
+  width: 100%;
+}

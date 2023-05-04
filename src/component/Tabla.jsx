@@ -1,22 +1,12 @@
 import React,{useEffect, useState} from 'react';
 import indexStyles from '@/styles/general.module.css'
-import api from '../../api'
 import shortid from 'shortid';
-export default function Tabla(){
-    const [db, setDb] = useState('');
-    useEffect(() => {
-        async function fetchData() {
-          const response = await api.get('/db');
-          setDb(response.data);
-        }
-        fetchData();
-    }, []);
-    
-    console.log(db.data)
+export default function Tabla({db}){
+
 
     return(
         <>
-            <h1>Tabla de compotentes y sus FPS/rendimiento</h1>
+
             <table className={indexStyles.default}>
                 <tbody>
                     

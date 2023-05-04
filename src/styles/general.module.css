@@ -14,3 +14,45 @@
     color:green;
 
 }
+.buttonContainer {
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.button1 {
+    background-color: mediumspringgreen;
+    padding: 20px;
+    margin: 10px;
+
+    font-weight: 600;
+    border-radius: 60px 60px 60px 60px;
+    -moz-border-radius: 60px 60px 60px 60px;
+    -webkit-border-radius: 60px 60px 60px 60px;
+    border: 0px solid #000000;
+    -webkit-box-shadow: 10px 10px 43px -18px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 43px -18px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 43px -18px rgba(0,0,0,0.75);
+    text-decoration: none;
+}
+.button1:hover{
+    background-color:darkseagreen;
+    cursor: pointer;
+
+}
+.divContainerForm{
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+.formBase > *{
+    padding: 15px;
+
+}
+.formBase > *{
+    margin: 15px;
+
+}
