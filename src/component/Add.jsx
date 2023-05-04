@@ -38,6 +38,7 @@ export default function Add({modeHandler}){
     return(
         <>
             <div className={indexStyles.divContainerForm}>
+                
                 <form onSubmit={handleSubmit} className={indexStyles.formBase} action="">
                     <label htmlFor="user">Usuario de discord:</label><br />
                     <input required  maxLength={255} type="text" id="user" name="user" value={input1Value} onChange={(event) => setInput1Value(event.target.value)}  placeholder='WikiKebabs#55431'></input><br />
@@ -54,13 +55,14 @@ export default function Add({modeHandler}){
                     <label htmlFor="verdicto">Veredicto</label><br />
                     <select required id="verdicto" value={selectValue} onChange={(event) => setSelectValue(event.target.value)} name="Veredicto">
                         <option  value="Seleccione un veredicto" disabled>Seleccione un veredicto</option>
-                        <option value="jugable">Jugable</option>
+                        <option value="Jugable">Jugable</option>
                         <option value="Regular">Regular</option>
                         <option value="Injugable">Injugable</option>
                     </select><br />
-
+                    
                     <input className={indexStyles.button1} type="submit"></input>
                 </form>
+                <p className={indexStyles.disclaimer}>NOTA: sólo puedes añadir una entrada por usuario, habla con freeman35g#5216 en el Discord si quieres añadir otra.</p>
             </div>
         </>
 
