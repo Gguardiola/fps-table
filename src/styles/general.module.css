@@ -14,6 +14,14 @@
     color:green;
 
 }
+.regular {
+    color:black;
+
+}
+.notPlayable {
+    color:red;
+
+}
 .buttonContainer {
     padding: 5%;
     display: flex;

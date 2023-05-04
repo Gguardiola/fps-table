@@ -6,7 +6,7 @@ import Tabla from '../component/Tabla'
 import {useState, useEffect} from 'react';
 import Add from '../component/Add'
 import api from '../../api'
-
+import { useRouter } from 'next/router'
 
 const roboto = Roboto({
   weight: '700',
@@ -15,6 +15,11 @@ const roboto = Roboto({
 
 export default function Home() {
   const [mode,setMode] = useState({modo: "table",prompt:"Añadir mi rendimiento"})
+  const router = useRouter();
+
+  function setModeHandler(){
+    setMode({modo: "table",prompt:"Añadir mi rendimiento"})
+  }
 
   const addHandler = () => {
     if (mode.modo == "add"){
@@ -30,6 +35,7 @@ export default function Home() {
 
   const [db, setDb] = useState('');
   useEffect(() => {
+      
       async function fetchData() {
         const response = await api.get('/db');
         setDb(response.data);
@@ -37,7 +43,7 @@ export default function Home() {
       fetchData();
   }, []);
   
-  console.log(db.data)
+  
   return (
     <>
       <Head>
@@ -53,7 +59,7 @@ export default function Home() {
         </div>
         {mode.modo == "add" ?
           <>
-            <Add></Add>
+            <Add modeHandler={setModeHandler}></Add>
           </>
           :
           <>
