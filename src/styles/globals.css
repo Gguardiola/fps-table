@@ -3,6 +3,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 table {
@@ -23,4 +24,13 @@ padding-right: 10px;
 textarea {
   resize: none;
   width: 100%;
+}
+footer {
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  bottom: 0;
+  height: 60px;
 }

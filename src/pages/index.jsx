@@ -66,7 +66,7 @@ export default function Home() {
             <Tabla db={db}></Tabla>         
           </>
         }
-
+      <footer><p>Creado por <a target="_blank" href="https://twitter.com/_freeman35g">@_freeman35g</a> y <a target="_blank" href="https://twitter.com/Cussyxd">@Cussyxd</a>. Dudas en el <a target="_blank" href="https://discord.gg/zuAJvvze8m">Discord!</a> </p></footer>
       </main>
     </>
   )
