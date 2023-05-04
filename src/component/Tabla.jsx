@@ -1,49 +1,41 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import indexStyles from '@/styles/general.module.css'
-import useSWR from 'swr';
-import useApiCall from "../utils/useApiCall.js"
-
-//Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
-
-
-
+import api from '../../api'
 export default function Tabla(){
-
-    const { data, error } = useSWR('api/staticdata', fetcher, {
-        revalidateOnFocus: false
-      });
-    console.log(data);
-    if (error) return <div>Failed to load</div>;
-    //Handle the loading state
-    if (!data) return <div>Loading...</div>;
-    const useApiCallHandler = async () => {
-        console.log("ADD");
-        const res = await useApiCall("/api/addData");
-
-    }
+    const [db, setDb] = useState('');
+    useEffect(() => {
+        async function fetchData() {
+          const response = await api.get('/db');
+          setDb(response.data);
+        }
+        fetchData();
+    }, []);
+    
+    console.log(db.data)
 
     return(
         <>
             <h1>Tabla de compotentes y sus FPS/rendimiento</h1>
             <table className={indexStyles.default}>
                 <tbody>
-                    <tr>
-                        {data ? (
-                            data.resultados.map((value, index) => ( 
-                                <>
-                                <td>{value.componentes}</td>
-                                <td>{value.rendimiento}</td>
-                                <td>{value.veredicto}</td>
-                                </>
+                    
+                         {db ? (
+                            db.data.map((result) => ( 
+                                <tr>
+                                    <td>{result.username}</td>
+                                    <td>{result.emulator}</td>
+                                    <td>{result.components}</td>
+                                    <td>{result.performance}</td>
+                                    <td>{result.veredict}</td>
+                                </tr>
                             ))
                         ) : (
-                            <h1>Cargando...</h1>
+                            <tr><td>Cargando...</td></tr>
                         )}
-                    </tr>
+       
                 </tbody>
             </table>
-            <button onClick={useApiCallHandler}>ADD</button>
+
 
         </>
 
