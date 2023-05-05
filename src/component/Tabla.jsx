@@ -20,12 +20,12 @@ export default function Tabla({db}){
 
     return(
         <>
-
+            {db && <div className={indexStyles.resultLen}><p >Mostrando {db.data.length} resultados. Ordenado de más nuevo a más antiguo</p></div> }
             <table className={indexStyles.default}>
-                <tbody>
+                <tbody >
                     
                          {db ? (
-                            db.data.map((result) => ( 
+                            db.data.slice(0).reverse().map((result) => ( 
                                 <tr key={shortid.generate()}>
                                     <td key={shortid.generate()}>{result.username}</td>
                                     <td key={shortid.generate()}>{result.emulator}</td>

@@ -40,7 +40,7 @@ export default function Add({modeHandler}){
             <div className={indexStyles.divContainerForm}>
                 
                 <form onSubmit={handleSubmit} className={indexStyles.formBase} action="">
-                    <label htmlFor="user">Usuario de discord:</label><br />
+                    <label htmlFor="user">Usuario de Discord:</label><br />
                     <input required  maxLength={255} type="text" id="user" name="user" value={input1Value} onChange={(event) => setInput1Value(event.target.value)}  placeholder='WikiKebabs#55431'></input><br />
 
                     <label htmlFor="emu">Emulador</label><br />
